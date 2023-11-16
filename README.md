@@ -3,43 +3,27 @@
 Este repositorio contiene el código fuente para el backend en ASP.NET Core y el frontend en React para un portafolio personal.
 
 
+## Configuración de la Base de Datos
 
-Primero crear la base de datos
+1. Asegurate de tener instalado SQL Server.
 
-CREATE DATABASE test4;
-CREATE TABLE Profile (
-    ProfileId INT PRIMARY KEY,
-    Name NVARCHAR(255),
-    Lastname NVARCHAR(255),
-    Email NVARCHAR(255),
-    City NVARCHAR(255),
-    Country NVARCHAR(255),
-    Summary NVARCHAR(MAX),
-    Instagram NVARCHAR(255),
-    Facebook NVARCHAR(255),
-    YearsOld INT
-);
+2. Crea una base de datos
 
-CREATE TABLE Framework (
-    FrameworkId INT PRIMARY KEY,
-    Name NVARCHAR(255),
-    Level NVARCHAR(255),
-    Year INT,
-    Quantity INT,
-    ProfileId INT FOREIGN KEY REFERENCES Profile(ProfileId)
-);
+3. Abre el archivo `appsettings.json` en la carpeta del proyecto backend (`backend/`).
 
-CREATE TABLE Hobby (
-    HobbyId INT PRIMARY KEY,
-    Name NVARCHAR(255),
-    Description NVARCHAR(MAX),
-    ProfileId INT FOREIGN KEY REFERENCES Profile(ProfileId)
-);
+4. Reemplaza la cadena de conexión en la sección `"ConnectionStrings"` con la información de tu servidor SQL Server:
 
+   ```json
+   "ConnectionStrings": {
+     "DefaultConnection": "Server=<nombre_servidor>;Database=<nombre_base_datos>;Trusted_Connection=True;TrustServerCertificate=True;"
+   },
 
-Posteriormente cambiar el archivo appsettings.json
+5. En tu terminal, navega a la carpeta del proyecto backend y ejecuta las migraciones para crear la base de datos:
 
-Yagregar datos a la base de datos.
+    ```bash
+    cd backend
+    dotnet ef database update
+    ```
 
 ## Configuración del Backend (ASP.NET Core)
 
@@ -93,7 +77,7 @@ El backend proporciona un endpoint:
 
 - **URL:** `http://localhost:5000/api/profile`
 - **Método:** GET
-- **Respuesta Esperada:** Un JSON con información del perfil, que incluye nombre, apellido, email, ciudad, país, resumen, frameworks y hobbies.
+- **Respuesta Esperada:** Un JSON con información del perfil, frameworks y hobbies.
 
 ### Interacción con el Frontend
 

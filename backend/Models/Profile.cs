@@ -9,7 +9,8 @@ public class Profile
     public string Summary { get; set; }
     public string Instagram { get; set; }
     public string Facebook { get; set; }
-    public int YearsOld { get; set; }
+    public int Age { get; set; }
+    public string ImageUrl { get; set; }
 
     public List<Framework> Frameworks { get; set; }
     public List<Hobby> Hobbies { get; set; }

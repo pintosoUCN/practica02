@@ -21,7 +21,7 @@ public class ProfileController : ControllerBase
     {
         try
         {
-            var profile = await _context.Profiles
+            var profile = await _context.Profile
                 .Include(p => p.Frameworks)
                 .Include(p => p.Hobbies)
                 .FirstOrDefaultAsync();
@@ -39,19 +39,19 @@ public class ProfileController : ControllerBase
 
             var profileData = new
         {
-            Name = "John",
-            Lastname = "Doe",
-            Email = "john.doe@example.com",
-            City = "Cityville",
-            Country = "Countryland",
+            Name = "Joaquin",
+            Lastname = "Pinto",
+            Email = "joaquin.pinto@alumnos.ucn.cl",
+            City = "Antofagasta",
+            Country = "Chile",
             Summary = "Desarrollador de software apasionado",
-            Instagram = "Desarrollador de software apasionado",
-            Facebook = "Facebook",
+            Instagram = "Joaquin",
+            Facebook = "Joaquin",
             YearsOld = 22,
             Frameworks = new[]
             {
-                new { Name = "React", Level = "Avanzado", Year = 2016 },
-                new { Name = "ASP.NET Core", Level = "Intermedio", Year = 2018 },
+                new { Name = "React", Level = "Avanzado", Year = 2022 },
+                new { Name = "ASP.NET Core", Level = "Intermedio", Year = 2022 },
                 // Agrega más frameworks según sea necesario
             },
             Hobbies = new[]
