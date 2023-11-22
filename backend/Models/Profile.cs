@@ -12,6 +12,6 @@ public class Profile
     public int Age { get; set; }
     public string ImageUrl { get; set; }
 
-    public List<Framework> Frameworks { get; set; }
-    public List<Hobby> Hobbies { get; set; }
+    public List<Framework> Frameworks { get; set; } = new List<Framework>();
+    public List<Hobby> Hobbies { get; set; } = new List<Hobby>();
 }

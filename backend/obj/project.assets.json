@@ -2577,11 +2577,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Joakoby21\\Desktop\\Práctica 2\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\Joakoby21\\Desktop\\WebMovil\\Práctica 2\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\Joakoby21\\Desktop\\Práctica 2\\backend\\backend.csproj",
+      "projectPath": "C:\\Users\\Joakoby21\\Desktop\\WebMovil\\Práctica 2\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\Joakoby21\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Joakoby21\\Desktop\\Práctica 2\\backend\\obj\\",
+      "outputPath": "C:\\Users\\Joakoby21\\Desktop\\WebMovil\\Práctica 2\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Joakoby21\\AppData\\Roaming\\NuGet\\NuGet.Config"
